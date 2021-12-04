@@ -9,7 +9,7 @@ class ProductsGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final productsData = Provider.of<Products>(context);
-
+    debugPrint('bu sınıf cagirildi');
     //* Product sınıfındaki favoriteItems ve items methodları bizlere liste getirmekte
     //* favoriteItems itemlere gelen degerleri filtreliyerek favori olarak işaretlenmiş olanları buluyor. 
     final products = showFavs ? productsData.favoriteItems : productsData.items;
