@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_state_management/providers/cart.dart';
 import 'package:flutter_state_management/providers/products.dart';
+import 'package:flutter_state_management/widgets/app_drawer.dart';
 import 'package:flutter_state_management/widgets/badge.dart';
 import '../widgets/products_grid.dart';
 import 'package:provider/provider.dart';
@@ -25,6 +26,7 @@ class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("MyShop"), actions: popUpMenuItems()),
+      drawer: AppDrawer(),
       body: ProductsGrid(_showOnlyFavorites),
     );
   }
